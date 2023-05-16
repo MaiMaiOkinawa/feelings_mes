@@ -70,6 +70,11 @@ h1{
     color: #f5f5dc;
 }
 
+.text.active #icon:active {
+    outline: none;
+    background-color: transparent;
+}
+
 
 .text-img {
     display: none;
@@ -102,10 +107,6 @@ img {
     margin: 0;
     font-size: 25px;
     font-weight: 700;
-}
-
-.text.active .text-img{
-    border: transparent;
 }
 
 /* A setting when text is active and text is on */
