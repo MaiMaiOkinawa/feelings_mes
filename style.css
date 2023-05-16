@@ -35,6 +35,8 @@ h1{
     position: relative;
     overflow: hidden;
     transition: 0.3s ease;
+    /* Prevent the text from wrapping */
+    white-space: nowrap
 }
 
 .text:last-of-type{
@@ -44,7 +46,7 @@ h1{
 
 .text.active {
     display: flex;
-    background-color: transparent;
+    /* background-color: transparent; */
     /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1); */
 }
 
@@ -65,14 +67,14 @@ h1{
 
 .text.active #icon:hover,
 .text i:hover {
-    color: beige;
+    color: #f5f5dc;
 }
 
 
 .text-img {
     display: none;
     margin: 5px 0 25px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     /* display: block; */
     top: 20px;
     left:-25px;
@@ -83,6 +85,12 @@ h1{
     object-fit: cover;
     background-position: center center;
     transition: 0.5s ease-in-out;
+}
+
+img {
+    outline: thick double rgb(255, 255, 255);
+    /* outline-color: rgba(42, 50, 91); */
+    box-shadow: 15px 15px 15px rgba(25, 25, 25, 0.3), 15px 15px 15px rgba(25, 25, 25, 0.3);
 }
 
 .text i {
@@ -96,13 +104,16 @@ h1{
     font-weight: 700;
 }
 
-
+.text.active .text-img{
+    border: transparent;
+}
 
 /* A setting when text is active and text is on */
 .text.active .text-img {
     position: relative;
     display: block;
     transition: transform 0.5s ease-in-out;
+    
 }
 
 .text-toggle {
