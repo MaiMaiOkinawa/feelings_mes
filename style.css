@@ -185,25 +185,34 @@ h1{
   }
 
   @media (max-width: 30em) {
-    body {
-      height: 100%;
-      min-height: 100%;
-      overflow-y: auto;
-    }
-
     .text {
-        margin: 0 0.625rem;
+        position: relative;
+        flex-direction: column;
+        margin:0 0.625rem;
     }
 
-    img {
+    .text i {
+        margin-top: 0.625rem;
+        margin-bottom: 0;
+    }
+
+    .text-img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 0;
+    }
+
+    .text-img img {
         outline: 5px solid var(--primary-yellow);
         box-shadow: 10px 10px;
     }
     .img__description {
-        top: 65%;
-        bottom: -5%;
-        left: 30%;
-        right: 0%;
+        top: 73%;
+        bottom: 0%;
+        left: 40%;
+        right: 5%;
+        font-size: 1rem;
     }
     .text-img:hover .img__description {
         box-shadow: 5px 5px;
