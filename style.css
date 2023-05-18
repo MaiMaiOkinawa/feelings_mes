@@ -16,6 +16,7 @@ body {
     font-family: 'Jost',Kokoro, sans-serif;
     background-color: var(--primary-green);
     color: var(--primary-black);
+  
 }
 
 h1{
@@ -73,11 +74,6 @@ h1{
   color: var(--primary-pink);
 }
 
-/* .text.active #icon:active {
-    outline: none;
-    background-color: transparent;
-} */
-
 
 .text-img {
     display: none;
@@ -95,8 +91,9 @@ h1{
     transition: 0.5s ease-in-out;
 }
 
-img {
+.text-img img {
   outline: 5px solid var(--primary-yellow);
+  box-shadow: 15px 15px;
 }
 
 .text i {
@@ -185,4 +182,30 @@ img {
     visibility: visible;
     opacity: 1;
     box-shadow: 10px 10px;
+  }
+
+  @media (max-width: 30em) {
+    body {
+      height: 100%;
+      min-height: 100%;
+      overflow-y: auto;
+    }
+
+    .text {
+        margin: 0.625rem;
+    }
+
+    img {
+        outline: 5px solid var(--primary-yellow);
+        box-shadow: 10px 10px;
+    }
+    .img__description {
+        top: 65%;
+        bottom: -5%;
+        left: 30%;
+        right: 0%;
+    }
+    .text-img:hover .img__description {
+        box-shadow: 5px 5px;
+    }
   }
